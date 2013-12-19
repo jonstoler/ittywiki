@@ -1,0 +1,5 @@
+ittywiki requires PHP 5.4. it requires a server (local, real, or virtual) to run.
+
+older versions of PHP may work but aren't officially supported.
+
+no database software is necessary.

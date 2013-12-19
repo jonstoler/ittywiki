@@ -1,0 +1,14 @@
+[^summary]: you are running version 1.0.
+
+# 1.0
+- initial release
+	- flat-file structure
+	- markdown formatting
+	- basic wiki syntax
+
+
+## Roadmap
+- markdown css optimizations
+- automatic summaries for pages without a summary footnote
+- responsive design
+- "command" pages (add colon to end of path, like `:cmd`) to view page metadata, deadlinks, and other info - different commands do different things, of course

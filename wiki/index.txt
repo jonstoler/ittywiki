@@ -1,0 +1,17 @@
+# welcome to ittywiki.
+
+ittywiki is a small, flat-file wiki.
+
+it is written in php, so all your edits go live as soon as you upload them; there's no need to run a script to recompile your wiki just to fix a nasty typo.
+
+every page is written in [Markdown](http://daringfireball.net/projects/markdown/), with additional wiki features to make writing pages a breeze.
+
+
+
+### Learn More About...
+
+- [[wiki filestructure|file structure]]
+- [[wiki syntax|syntax]]
+- [[requirements]]
+- [[changelog]]
+- [[license]]

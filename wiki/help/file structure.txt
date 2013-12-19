@@ -1,0 +1,24 @@
+ittywiki is designed to make content creation fast and easy. creating pages is as simple as creating files and folders.
+
+all wiki data is stored in the `wiki` folder.
+
+system files are stored in the `core` folder. updates can be applied to the `core` folder without touching your wiki content.
+
+
+## Folders
+
+folders act as organization tools for ittywiki. you can have infinite nested folders and infinite files in any particular folder.
+
+folders are also necessary if you want two pages with the same name.
+
+by default, wiki folders display a list of their contents and child folder contents when viewed in the browser. this makes it easy to quickly index many pages at once. for an example, check out the "[[help]]" folder.
+
+
+## Files
+
+every wiki page is simply a file. page names are the file name, excluding all extensions extensions start with a period (".") and go until the end of the file name. files can have multiple extensions.
+
+
+## Index Files
+
+if a file named "index" is placed at the root of a folder, it is displayed rather than the file list when that folder is viewed in the browser.

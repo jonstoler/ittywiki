@@ -1,0 +1,114 @@
+body {
+  font-family: "Helvetica Neue", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  max-width: 600px;
+  margin: auto;
+}
+a {
+  text-decoration: none;
+  color: #990000;
+}
+a:hover {
+  color: #4c0000;
+}
+a.dead {
+  color: #750000;
+}
+a .tooltip {
+  border-color: #990000;
+}
+.tooltip {
+  border-bottom: 1px dotted;
+}
+.tooltip:hover {
+  cursor: pointer;
+}
+ul.filesystem {
+  list-style: none;
+  font-weight: bold;
+  font-size: 120%;
+}
+ul.filesystem li {
+  padding: 2px 0px;
+}
+ul.filesystem li.directory {
+  margin: 10px 0px;
+}
+ul.filesystem ul {
+  list-style: none;
+  padding-left: 15px;
+  border-left: 1px solid #990000;
+}
+ul.breadcrumb {
+  background-color: #eeeeee;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  list-style: none;
+  padding: 5px 15px;
+  width: 100%;
+}
+ul.breadcrumb li {
+  display: inline-block;
+  font-weight: bold;
+}
+ul.breadcrumb li.active {
+  color: #888888;
+}
+ul.breadcrumb .divider {
+  padding: 0px 5px;
+  color: #888888;
+}
+.content {
+  background-color: #eeeeee;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  padding: 20px;
+}
+.content header .center {
+  text-align: center;
+}
+.content header h1.title {
+  margin-top: 0;
+}
+.content header h1.center {
+  margin: 0;
+  padding: 0;
+  color: #888888;
+}
+.content hr {
+  height: 1px;
+  border-bottom: 0;
+  border-top: 1px solid #acacac;
+  width: 80%;
+  margin: auto;
+}
+footer {
+  background-color: #eeeeee;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 15px 0px;
+  padding: 5px;
+  width: 100%;
+  font-size: 90%;
+  text-align: center;
+  color: #888888;
+}
+footer a {
+  color: #555555;
+}
+footer a:hover {
+  color: #222222;
+}

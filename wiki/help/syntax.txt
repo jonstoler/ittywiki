@@ -1,0 +1,79 @@
+# ittywiki Syntax
+
+[markdown]: http://daringfireball.net/projects/markdown/
+
+all ittywiki files are written in [Markdown][markdown], but a few additional wiki features have been added.
+
+for information on how to write in Markdown, please visit [John Gruber's site][markdown].
+
+
+## Page Titles
+
+page titles default to the name of the file, minus its extension(s), with every word uppercased.
+
+for instance, the file "`hello there ittywiki.many.extensions`" will result in the title "Hello There Ittywiki."
+
+however, if you include a Markdown header ("#") on the first non-blank line of the file, the content of this header is used as the title. the header level does not make any difference.
+
+note that the header will be stripped from the body of the file if you do this.
+
+
+## Tooltips
+
+to create a tooltip, a special bracketed syntax is used:
+
+<code>[body text]\{tooltip text}</code>
+
+this is rendered as:
+[body text]{tooltip text}  
+(hover over the body text to view the tooltip)
+
+tooltips are useful for adding additional detail to a wiki page that may be interesting or insightful, but also unecessary. rather than bore the reader with this information, you can hide it unless they want to see it.
+
+
+## Linking
+
+obviously a key feature to any wiki is linking.
+
+ittywiki uses the standard double brace syntax for linking:
+
+<code>[\[link to file]]</code>
+
+note that links are based on the file name, not the page's title.
+
+since ittywiki allows you to have multiple pages with the same name, you can specify a path to a specific file via forward slash ("/"):
+
+<code>[\[specific directory/file]]</code>
+
+by default, links' body content will match the content within the brackets, but you can change this via pipe ("|"):
+
+<code>[\[body text|link to file]]</code>
+
+note that if you do not specify a path to your file and there are multiple files with the same name, the file closest to the root will be chosen.
+
+you can also add prefixes and suffixes to links by placing them before the braces:
+
+<code>prefix-[\[link]]-suffix</code>
+
+this renders as: prefix-[[link]]-suffix
+
+prefixes and suffixes are placed before the braces but cannot contain any whitespace.
+
+* * *
+
+dead links are rendered slightly darker:  
+[[deadlink]]
+
+if a page links to itself, the "link" is simply bolded and not hyperlinked:  
+[[link to self|syntax]]
+
+### Page Summaries
+
+pages can provide summaries via Markdown footnote syntax:
+
+`[^summary]: this is a page summary`
+
+if a summary is provided, links to that page will include a tooltip containing the summary contents.
+
+for instance:  
+[[summary demo]]
