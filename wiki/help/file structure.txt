@@ -16,7 +16,7 @@ by default, wiki folders display a list of their contents and child folder conte
 
 ## Files
 
-every wiki page is simply a file. page names are the file name, excluding all extensions extensions start with a period (".") and go until the end of the file name. files can have multiple extensions.
+every wiki page is simply a file. page names are the file name, excluding all extensions. extensions start with a period (".") and go until the end of the file name. files can have multiple extensions.
 
 
 ## Index Files

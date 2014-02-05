@@ -57,7 +57,7 @@ you can also add prefixes and suffixes to links by placing them before the brace
 
 this renders as: prefix-[[link]]-suffix
 
-prefixes and suffixes are placed before the braces but cannot contain any whitespace.
+prefixes and suffixes are placed before or after the braces but cannot contain any whitespace.
 
 * * *
 
