@@ -1,17 +1,20 @@
+# Route everything through ittywiki.php for processing
+
 <IfModule mod_rewrite.c>
+
+	# turn redirects on
 	RewriteEngine On
 
 	# change to subdir of installed wiki
+	# or the routing WILL NOT work!
 	RewriteBase /ittywiki
-
-	# allow normal routing of css or js urls
-	RewriteCond %{REQUEST_URI} "/core/css/" [OR]
-	RewriteCond %{REQUEST_URI} "/core/js/"
-	RewriteRule (.*) $1 [L]
 
 	# reroute url requests to ittywiki.php for processing
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteCond %{REQUEST_FILENAME} !-d
-	RewriteRule . ittywiki.php [L]
-	RewriteRule ^ ittywiki.php [L]
+	RewriteRule ^(.*) ittywiki.php [L]
+
 </IfModule>
+
+# routes "/" to ittywiki.php
+DirectoryIndex ittywiki.php
