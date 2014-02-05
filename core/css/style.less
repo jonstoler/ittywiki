@@ -24,8 +24,15 @@ body {
 
 a {
 	text-decoration: none;
-	color: @focus;
 
+	color: #242a99;
+	&:hover { color: #0b0f4c; }
+}
+
+// internal links
+a.internal, .breadcrumb a, .filesystem a {
+	color: @focus;
+	
 	&:hover {
 		color: @focus-dark;
 	}

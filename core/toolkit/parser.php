@@ -63,15 +63,15 @@
 						if($link = $ittywiki->fs->findNestedDir(wikiname($name))){
 							if(!$index = $link->find('index')){
 								$this->metadata['links'][] = $index;
-								return '<a href="' . $link->link() . '">' . $title . '</a>' . $match[4];
+								return '<a class="internal" href="' . $link->link() . '">' . $title . '</a>' . $match[4];
 							} else {
 								// todo: allow index files to have summaries
 								$this->metadata['links'][] = $link;
-								return '<a href="' . $link->link() . '">' . $title . '</a>' . $match[4];
+								return '<a class="internal" href="' . $link->link() . '">' . $title . '</a>' . $match[4];
 							}
 						} else { // can't find directory either, deadlink
 							$this->metadata['deadlinks'][] = $name;
-							return '<a class="dead">' . $title . '</a>' . $match[4];
+							return '<a class="dead internal">' . $title . '</a>' . $match[4];
 						}
 					} else { // file
 						if($link === $this->file){
@@ -83,9 +83,9 @@
 
 						if($summary = $link->summary()){
 							$summary = trim($summary);
-							return '<a href="' . $link->link() . '"><span class="tooltip" title="' . $summary . '">' . $title . '</span></a>' . $match[4];
+							return '<a class="internal" href="' . $link->link() . '"><span class="tooltip" title="' . $summary . '">' . $title . '</span></a>' . $match[4];
 						} else {
-							return '<a href="' . $link->link() . '">' . $title . '</a>' . $match[4];
+							return '<a class="internal" href="' . $link->link() . '">' . $title . '</a>' . $match[4];
 						}
 					}
 

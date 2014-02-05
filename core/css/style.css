@@ -5,15 +5,29 @@ body {
 }
 a {
   text-decoration: none;
-  color: #990000;
+  color: #242a99;
 }
 a:hover {
+  color: #0b0f4c;
+}
+a.internal,
+.breadcrumb a,
+.filesystem a {
+  color: #990000;
+}
+a.internal:hover,
+.breadcrumb a:hover,
+.filesystem a:hover {
   color: #4c0000;
 }
-a.dead {
+a.internal.dead,
+.breadcrumb a.dead,
+.filesystem a.dead {
   color: #750000;
 }
-a .tooltip {
+a.internal .tooltip,
+.breadcrumb a .tooltip,
+.filesystem a .tooltip {
   border-color: #990000;
 }
 .tooltip {
