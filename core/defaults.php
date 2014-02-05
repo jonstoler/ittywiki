@@ -1,5 +1,5 @@
 <?php
-	g::set('debug', true);
+	g::set('debug', false);
 
 	g::set('wiki.title', 'ittywiki');
 	g::set('wiki.dir', '/wiki');
