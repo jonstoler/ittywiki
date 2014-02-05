@@ -1,4 +1,11 @@
-[^summary]: you are running version 1.0.
+[^summary]: you are running version 1.0.1.
+
+# 1.0.1
+- default wiki typo fixes
+- cleaned up `.htaccess` url routing (no longer using hard-coded css/js access)
+- turn debug mode off by default
+- make smartypants a setting (default off)
+- make external links blue (internal links are still red)
 
 # 1.0
 - initial release
@@ -8,7 +15,8 @@
 
 
 ## Roadmap
-- markdown css optimizations
+- better markdown css
 - automatic summaries for pages without a summary footnote
 - responsive design
+	- fix tooltips on mobile
 - "command" pages (add colon to end of path, like `:cmd`) to view page metadata, deadlinks, and other info - different commands do different things, of course
