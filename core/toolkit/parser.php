@@ -96,7 +96,11 @@
 			$text = preg_replace("/\\[(.*)\\]\{(.*)\}/uU", "<span class=\"tooltip\" title=\"$2\">$1</span>", $text);
 			$text = preg_replace("/->/uU", "&rarr;", $text);
 
-			$this->body = smartypants(markdown($text));
+			$this->body = markdown($text);
+
+			if(g::get('smartypants', false)){
+				$this->body = smartypants($text);
+			}
 		}
 
 		private function summary($str){

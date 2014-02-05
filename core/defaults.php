@@ -1,6 +1,8 @@
 <?php
 	g::set('debug', false);
 
+	g::set('smartypants', false);
+
 	g::set('wiki.title', 'ittywiki');
 	g::set('wiki.dir', '/wiki');
 
