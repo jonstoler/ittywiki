@@ -6,6 +6,7 @@
 		public $body  = '';
 		public $summary = false;
 		public $metadata = [];
+		public $headers = [];
 
 		private $file;
 
@@ -15,7 +16,7 @@
 			$lines = $this->splitLines($str);
 
 			$this->title($lines);
-			$this->summary($str);
+			$this->summary = false;
 			$this->body($lines);
 		}
 
@@ -80,7 +81,6 @@
 						}
 
 						$this->metadata['links'][] = $link;
-
 						if($summary = $link->summary()){
 							$summary = trim($summary);
 							return '<a class="internal" href="' . $link->link() . '"><span class="tooltip" title="' . $summary . '">' . $title . '</span></a>' . $match[4];
@@ -96,24 +96,10 @@
 			$text = preg_replace("/\\[(.*)\\]\{(.*)\}/uU", "<span class=\"tooltip\" title=\"$2\">$1</span>", $text);
 			$text = preg_replace("/->/uU", "&rarr;", $text);
 
-			$this->body = markdown($text);
-
-			if(g::get('smartypants', false)){
-				$this->body = smartypants($text);
-			}
-		}
-
-		private function summary($str){
-			$footnotes = markdownwithfootnotes($str)['footnotes'];
-
-			if(array_key_exists('summary', $footnotes)){
-				// todo: allow bold and italic via markdown (but nothing else)
-				$summary = $footnotes['summary'];
-
-				$this->summary = $summary;
-			} else {
-				$this->summary = false;
-			}
+			$wikiparser = new wikiparser();
+			$this->body = $wikiparser->text($text);
+			$this->headers = $wikiparser->headers;
+			$this->summary = $wikiparser->summary;
 		}
 	}
 

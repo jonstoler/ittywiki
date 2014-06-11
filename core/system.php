@@ -38,8 +38,9 @@
 
 	// load ittywiki and parsers
 	require_once(g::get('root.core') . DS . 'ittywiki.php');
-	require_once(g::get('root.core') . DS . 'smartypants/smartypants.php');
-	require_once(g::get('root.core') . DS . 'markdown/markdown.php');
+	require_once(g::get('root.core') . DS . 'Parsedown.php');
+	require_once(g::get('root.core') . DS . 'ParsedownExtra.php');
+	require_once(g::get('root.core') . DS . 'wikiparser.php');
 
 
 	if(!is_dir(g::get('root.wiki'))){

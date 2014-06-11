@@ -1,4 +1,10 @@
-[^summary]: you are running version 1.0.1.
+[^summary]: you are running version 1.1.
+
+# 1.1
+- remove smartypants entirely
+- switch to parsedown
+- optional page table of contents (based on headers) to side of page
+- link to any header on the page
 
 # 1.0.1
 - default wiki typo fixes
