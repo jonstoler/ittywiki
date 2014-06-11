@@ -1,5 +1,7 @@
 body {
   font-family: "Helvetica Neue", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+}
+.container {
   max-width: 600px;
   margin: auto;
 }
@@ -76,6 +78,46 @@ ul.breadcrumb li.active {
 ul.breadcrumb .divider {
   padding: 0px 5px;
   color: #888888;
+}
+.toc {
+  background-color: #333;
+  color: #f7f7f7;
+  border-radius: 0px 4px 4px 0px;
+  padding: 10px;
+  font-size: 90%;
+  position: fixed;
+  top: 60px;
+  left: -190px;
+  width: 200px;
+  transition: left 0.4s;
+  -webkit-transition: left 0.4s;
+  -moz-transition: left 0.4s;
+  -o-transition: left 0.4s;
+}
+.toc:hover {
+  left: 0;
+}
+.toc a {
+  color: #f7f7f7;
+  font-weight: bold;
+  display: block;
+  margin: 2px 0px;
+}
+.toc a:hover {
+  color: #888;
+}
+.toc a.h1 {
+  font-size: 110%;
+}
+.toc a.h3 {
+  padding-left: 10px;
+}
+.toc a.h4 {
+  padding-left: 20px;
+}
+.toc a.h5,
+.toc a.h6 {
+  padding-left: 25px;
 }
 .content {
   background-color: #eeeeee;

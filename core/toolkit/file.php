@@ -130,6 +130,11 @@
 			return $this->_parser->metadata;
 		}
 
+		function headers(){
+			$this->render();
+			return $this->_parser->headers;
+		}
+
 		function size(){
 			return filesize($this->path->toString());
 		}

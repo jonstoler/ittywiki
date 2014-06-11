@@ -49,9 +49,6 @@ function displayTip(e){
 
 		var pos = offset(elem);
 
-		console.log(pos.left + ", " + pos.top);
-		console.log(window.innerWidth - 50);
-
 		var direction;
 		if(pos.top > t.offsetHeight){
 			direction = "bottom";
@@ -93,18 +90,14 @@ function tip(className){
 }
 
 function offset(elem){
-	var left, top;
-	left = top = 0;
-
-	if(elem.offsetParent){
-		do {
-			left += elem.offsetLeft - elem.scrollLeft + elem.clientLeft;
-			top += elem.offsetTop - elem.scrollTop + elem.clientTop;
-		} while(elem = elem.offsetParent);
+	var xy = {"left": 0, "top": 0};
+	if(elem){
+		xy = {"left": elem.offsetLeft, "top": elem.offsetTop};
+		var par = offset(elem.offsetParent);
+		for(var key in par){
+			xy[key] += par[key];
+		}
 	}
 
-	if(isNaN(left)){ left = 0; }
-	if(isNaN(top)){ top = 0; }
-
-	return {"left": left, "top": top};
+	return xy;
 }
