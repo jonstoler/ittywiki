@@ -9,11 +9,5 @@
 	<?php echo css('style') ?>
 	<?php echo css('tip') ?>
 	<?php echo js('tip') ?>
-
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$(".tooltip").tipsy({gravity: 's'});
-		});
-	</script>
 </head>
 <body>
